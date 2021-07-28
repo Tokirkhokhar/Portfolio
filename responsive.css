@@ -59,4 +59,7 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .about-section .about-info{
+        padding: 0 15px;
+    }
 }
