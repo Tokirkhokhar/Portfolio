@@ -54,3 +54,9 @@
         font-size: 40px;
     }
 }
+@media(max-width:433px){
+    .service-section .service-item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
