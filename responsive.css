@@ -7,7 +7,7 @@
     }
 }
 
-@media(max-width:767px){
+@media(max-width:821px){
     .contact-section .w-50,
     .contact-section .contact-item,
     .portfolio-section .portfolio-item,
@@ -41,6 +41,9 @@
     }
     .effect-5{
         right: 4%;
+    }
+    .about-section .about-info{
+        padding: 0 15px;
     }
     .about-section .about-img{
         padding-bottom:30px ;
