@@ -430,22 +430,22 @@
             <!-- contact form start -->
             <div class="row">
                 <div class="contact-form">
-                    <form >
+                    <form onsubmit="snedEmail()">
                         <div class="row">
                             <div class="w-50">
                                 <div class="input-group outer-shadow hover-in-shadow" data-aos="fade-right" >
-                                    <input type="text" placeholder="Name" class="input-control">
+                                    <input type="text" placeholder="Name" class="input-control" id="name">
                                 </div>
                                 <div class="input-group outer-shadow hover-in-shadow"  data-aos="fade-right" data-aos-duration="1300">
-                                    <input type="text" placeholder="Email" class="input-control">
+                                    <input type="text" placeholder="Email" class="input-control " id="email">
                                 </div>
                                 <div class="input-group outer-shadow hover-in-shadow"  data-aos="fade-right" data-aos-duration= "1800">
-                                    <input type="text" placeholder="Subject" class="input-control">
+                                    <input type="text" placeholder="Subject" class="input-control" id="subject">
                                 </div>
                             </div>
                             <div class="w-50"  data-aos="fade-left">
                                 <div class="input-group outer-shadow hover-in-shadow">
-                                    <textarea class="input-control" placeholder="Message"></textarea>
+                                    <textarea class="input-control" placeholder="Message" id="body"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -463,6 +463,8 @@
     </section>
     <!-- contect section end -->
     
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
     
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -471,6 +473,24 @@
         duration: 800
       }
       );
+    </script>
+    <script>  
+     function snedEmail(){
+        
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "tokir77799@gmail.com",
+                Password : "slktyhsqvwztbhrx",
+                To : 'tokir77799@gmail.com',
+                From : document.getElementById('email').value,
+                Subject : "from portfolio"+ document.getElementById('subject').value,
+                Body : "Name: "+document.getElementById('name').value+
+                  "<br> Email : "+document.getElementById('email').value+
+                  "<br> Message :"+document.getElementById('body')
+            }).then(
+            message => alert(message)
+            ); 
+        }
     </script>
 
     <script src="./script.js"></script>
